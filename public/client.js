@@ -19,7 +19,7 @@ const appendNewTutor = tutor => {
   const categoryTdTutor = document.createElement("td");
   categoryTdTutor.innerHTML = tutor.category;
   const category2TdTutor = document.createElement("td");
-  category2TdTutor.innerHTML = tutor.category;
+  category2TdTutor.innerHTML = tutor.category2;
   const contactTdTutor = document.createElement("td");
   contactTdTutor.innerHTML = tutor.contact;
   const dateTdTutor = document.createElement("td");
