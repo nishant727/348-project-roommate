@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 // init sqlite db
-const dbFile = "./.data/sqlite266.db";
+const dbFile = "./.data/sqlite255.db";
 const exists = fs.existsSync(dbFile);
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database(dbFile);
@@ -44,7 +44,7 @@ Category.init(
   try {
     const ticket = await Category.build({
       id: 'None',
-      description: "0 Stars"
+      description: "None"
     });
     console.log(ticket.toJSON());
     await ticket.save();
@@ -56,7 +56,7 @@ Category.init(
   try {
     const clothing = await Category.build({
       id: 'Few',
-      description: "1 Star"
+      description: "Few"
     });
     console.log(clothing.toJSON());
     await clothing.save();
@@ -69,7 +69,7 @@ Category.init(
   try {
     const furniture = await Category.build({
       id: 'Average',
-      description: "2 Stars"
+      description: "Average"
     });
     console.log(furniture.toJSON());
     await furniture.save();
@@ -177,7 +177,7 @@ Category2.init(
   
   try {
     const dorm_buys = await Category2.build({
-      id: 'Slightly More than Average',
+      id: 'Mildly Loud',
       description: "3 Stars"
     });
     console.log(dorm_buys.toJSON());
@@ -190,7 +190,7 @@ Category2.init(
   
   try {
     const electronics = await Category2.build({
-      id: "More than Average",
+      id: 'Loud',
       description: "4 Stars"
     });
     console.log(electronics.toJSON());
@@ -203,7 +203,7 @@ Category2.init(
   
   try {
     const textbooks = await Category2.build({
-      id: 'Many',
+      id: 'Very Loud',
       description: "5 Stars!"
     });
     console.log(textbooks.toJSON());
