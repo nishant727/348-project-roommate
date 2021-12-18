@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+   <style>
+    table, th, td {
+      border:1px solid black;
+    }
+  </style>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A lightweight page with a small backend"
+    />
+
+    <title>Welcome to Boiler Buys, Shopping for Students!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        BB Roommate Portal
+      </h1>
+    </header>
+
+    <main>
+      <p class="bold">Welcome!</p>
+      <!--<a href="https://combined-multiplex.glitch.me/" title="">Return to Main Page</a>-->
+      <button onclick="window.location.href = 'https://boiler-buys-main.glitch.me/'">Return to Main Page</button>
+
+      <p>Looking for a roommate for the next academic year? Put in your information and you can look through the table to find an ideal roommate!</p>
+
+      <form>
+        <input
+          name="title"
+          type="text"
+          maxlength="100"
+          placeholder="Name"
+        />
+        <input
+          name="description"
+          type="text"
+          maxlength="100"
+          placeholder="Major/Graduation Year"
+        />
+        <input
+          name="contact"
+          type="text"
+          maxlength="100"
+          placeholder="Interests / Hobbies"
+        />
+        <label>
+          Preferred Noise Level:
+        </label>
+        <select name="category">
+          <option value="Very Quiet">
+            Quiet
+          </option>
+          <option value="Mildly Quiet">
+            Mildly Quiet
+          </option>
+          <option value="Average">
+            Average
+          </option>
+          <option value="Mildly Loud">
+            Mildly Loud
+          </option>
+          <option value="Loud">
+            Loud
+          </option>
+          <option value="Very Loud">
+            Very Loud
+          </option>
+        </select>
+        <p> </p>
+        <label>
+          Expected Guests Amount:
+        </label>
+        <select name="category2">
+          <option value="None">
+            None
+          </option>
+          <option value="Few">
+            Few
+          </option>
+          <option value="Average">
+            Average
+          </option>
+          <option value="Slightly More than Average">
+            Slightly More than Average
+          </option>
+          <option value="More than Average">
+            More than Average
+          </option>
+          <option value="Many">
+            Many
+          </option>
+        </select>
+        <button type="submit" id="roommate-user">Submit Rating</button>
+      </form>
+
+      <table style="width:50%">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Major/Graduation Year</th>
+            <th>Guest Amount</th>
+            <th>Noise Level</th>
+            <th>Interests</th>
+            <th>Added</th>
+          </tr>
+        </thead>
+        <tbody id="roommate_table"></tbody>
+      </table>
+      
+    </main>
+  </body>
+</html>
